@@ -1,0 +1,2 @@
+- what is jvm and how it works - [https://beginnersbook.com/2013/05/jvm/](https://beginnersbook.com/2013/05/jvm/)
+- 
