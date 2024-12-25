@@ -40,3 +40,13 @@ class Geeta {
 	-  ClassPathXmlApplicationContext
 	- AnnotationConfigApplicationContext
 	-  FileSystemXmlApplicationContext
+- more info - https://stackoverflow.com/questions/19615972/application-context-what-is-this
+- Dependency injection done by IOC container can be done in 2 ways () -
+	- more info in video - https://youtu.be/bICqNfzUG4c?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=304
+	- using setter injection
+	- using constructor injection
+- configuration file (below video provides all info on this)- 
+- https://youtu.be/bICqNfzUG4c?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=716
+- practical example to use setter injection using xml file - 
+	- https://youtu.be/C2p1ngCq5KY?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=700
+- 
