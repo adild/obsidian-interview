@@ -1,5 +1,5 @@
 - Spring is a dependency injection framework to make java application loosely coupled.
-- it removes tightly coupled code so that later fi we want to changes something it should not be very tightly coupled.
+- it removes tightly coupled code so that later if we want to changes something it should not be very tightly coupled.
 - It makes easy development of javaEE application.
 <h4>Dependency Injection</h4>
 - Its a design pattern which helps to design applications.
@@ -19,10 +19,10 @@ class Geeta {
 }
 ```
 
-- In the above example, Ramu class has object Geeta which gonna use. ie it has dependency on Geeta class help to procedd.
+- In the above example, Ramu class has object Geeta which gonna use. ie it has dependency on Geeta class help to procced.
 - Dependency means one class is dependent on another class for its work.
-- we can eliminate this dependency using new keyword is use Geeta ob = new Geeta(); but if we use new keyword it will become highly coupled.
-- Dependency Injection will automatically creates the Geeta object and inject it into Ramu internally so that we dont have to use new keyword. This whole process is called Inversion of Control (IOC).
+- we can eliminate this dependency using new keyword ie use Geeta ob = new Geeta(); but if we use new keyword it will become highly coupled.
+- Dependency Injection will automatically creates the Geeta object and inject it into Ramu internally so that we don't have to use new keyword. This whole process is called Inversion of Control (IOC).
 <h4>IOC container</h4>
 - IOC container comes under spring framework as a component.
 - Its some of the functions are to create objects, hold objects in memory, inject one object into another ie dependency injection.
