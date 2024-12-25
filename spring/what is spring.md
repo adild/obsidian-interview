@@ -1,6 +1,6 @@
 - Spring is a dependency injection framework to make java application loosely coupled.
 - it removes tightly coupled code so that later if we want to changes something it should not be very tightly coupled.
-- It makes easy development of javaEE application.
+- It makes easy development of javaEE application. [[It is basically IOC Container]]
 <h4>Dependency Injection</h4>
 - Its a design pattern which helps to design applications.
 - Example -
@@ -47,6 +47,10 @@ class Geeta {
 	- using constructor injection
 - configuration file (below video provides all info on this)- 
 - https://youtu.be/bICqNfzUG4c?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=716
-- practical example to use setter injection using xml file - 
+- practical example to use setter injection using xml - 
 	- https://youtu.be/C2p1ngCq5KY?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=700
+<h4> Life Cycle methods of Spring Bean </h4>
+- beans are nothing but java classes. 
+- theory - https://www.youtube.com/watch?v=jChQnUMsW7k&list=PL0zysOflRCekeiERASkpi-crREVensZGS&index=13
+- more info in simple terms - https://medium.com/@sendvjs/spring-bean-life-cycle-9363332c335e
 - 
