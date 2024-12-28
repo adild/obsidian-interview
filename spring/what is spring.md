@@ -1,6 +1,6 @@
 - Spring is a dependency injection framework to make java application loosely coupled.
 - it removes tightly coupled code so that later if we want to changes something it should not be very tightly coupled.
-- It makes easy development of javaEE application. [[It is basically IOC Container]]
+- It makes easy development of javaEE application.
 <h4>Dependency Injection</h4>
 - Its a design pattern which helps to design applications.
 - Example -
@@ -33,8 +33,9 @@ class Geeta {
 - Using configuration, spring container will understand how to deal with beans.
 - After doing injection, application code can use the beans created by container using get.
 <h4>ApplicationContext</h4>
+- ApplicationContext is an interface.
 - It is basically IOC Container ie represents IOC Container.
-- it implements beanFactory interface.
+- it implements beanFactory interface. So all properties of beanFactory are inherited by ApplicationContext.
 - ApplicationContext is a interface so we cant create object, so we create object of its sub class. 
 - sub classes are -
 	-  ClassPathXmlApplicationContext
@@ -82,3 +83,20 @@ class Geeta {
     If Spring finds multiple matching beans, it considers it an ambiguity. You can use the @Qualifier annotation to resolve this by providing the bean name that will be used for autowiring.
     
 - @Qualifier annotation -  **helps in injecting specific beans when there are multiple candidates of the same type**.
+<h4>Stereotype Annotations </h4>
+- So far ie earlier in this we were using <bean / >tag in xml to create bean of an object.
+- Now we using Stereotype Annotations so we can eliminate the use of <bean /> tag.
+- @Component annotation is used instead of <bean /> tag to create a bean of an object so IOC container can use it.
+- Example - 
+```
+@Component
+class Student {
+
+}
+```
+- In above example, IOC container scans the Student class and found that it has @Component annotation so it creates the bean/object of the class at runtime.
+- So we can say <bean /> and @Component are same.
+- practical - https://youtu.be/4gng9A7fXa8?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=378
+- 
+
+
