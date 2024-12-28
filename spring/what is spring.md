@@ -53,4 +53,32 @@ class Geeta {
 - beans are nothing but java classes. 
 - theory - https://www.youtube.com/watch?v=jChQnUMsW7k&list=PL0zysOflRCekeiERASkpi-crREVensZGS&index=13
 - more info in simple terms - https://medium.com/@sendvjs/spring-bean-life-cycle-9363332c335e
-- 
+- it provides two methods to every bean by default. These are:
+
+	1) public void init() 2) public void destroy()
+- Execution of flow of program when application is started - 
+	- When we run the program, first of all, the spring container gets started. After that, the container creates the instance of a bean as per the request, and then the required dependencies are injected. At the end, the bean is destroyed when the spring container is closed.
+- practical example using xml - https://www.youtube.com/watch?v=eRKQqHTHqHI&list=PL0zysOflRCekeiERASkpi-crREVensZGS&index=14
+- practical example using interfaces - https://www.youtube.com/watch?v=Xt5r19Ax4ag&list=PL0zysOflRCekeiERASkpi-crREVensZGS&index=15 
+- practical example using annotation - https://www.youtube.com/watch?v=lDC15I7AH6E&list=PL0zysOflRCekeiERASkpi-crREVensZGS&index=16
+<h4>Autowiring</h4>
+- Feature of spring framework in which spring container inject the dependencies automatically.
+- Autowiring cant be used to inject primitive and string values. It works with reference only (ie objects).
+- simply autowiring will inject one object into another automatically. See the above example of Ramu and Geeta. Ramu is dependent on Geeta. We are already doing dependency injection in previous points but there we were doing it manually like using xml config to find object reference and setting the values using <ref bean = "" />. But with autowiring we can do this automatically.
+- 2 ways to achieve autowiring - 
+	- xml - using autowiring modes such as no, byName, byType, constructor, autodetect
+	- annotations - @Autowired
+- practical using xml (not important) - https://www.youtube.com/watch?v=k_ZWbZBuHqY&list=PL0zysOflRCekeiERASkpi-crREVensZGS&index=18
+- practical using @Autowired annotation - https://youtu.be/jPA6tz8YNiA?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=235
+- The @Autowired annotation is a core feature of Spring that automatically injects dependencies into classes, eliminating the need for manual configuration. It's part of Spring's inversion of control (IoC) container, which manages the configuration and lifecycle of application objects. 
+  Here are some things to know about the @Autowired annotation:
+- **How it works**
+    When Spring scans code for beans, it identifies dependencies and tries to find matching beans in the application context. If it finds a single matching bean, it injects it into the target class. 
+- **Where to apply**
+    The @Autowired annotation can be applied to variables, methods, and constructors. 
+- **How to enable**
+    To use the @Autowired annotation, you need to enable annotation-based configuration in the spring bean configuration file. 
+- **How to resolve ambiguities**
+    If Spring finds multiple matching beans, it considers it an ambiguity. You can use the @Qualifier annotation to resolve this by providing the bean name that will be used for autowiring.
+    
+- @Qualifier annotation -  **helps in injecting specific beans when there are multiple candidates of the same type**.
