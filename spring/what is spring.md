@@ -97,6 +97,34 @@ class Student {
 - In above example, IOC container scans the Student class and found that it has @Component annotation so it creates the bean/object of the class at runtime.
 - So we can say <bean /> and @Component are same.
 - practical - https://youtu.be/4gng9A7fXa8?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=378
+<h4>Bean Scope</h4>
+- When we create a bean for IOC container either using <bean /> tag or @Component Annotation it creates a bean or an object for it. 
+- By default, it creates singleton scope.
+- Bean Scope types are - 
+	- Singleton
+	- prototype
+	- request
+	- session
+	- globalsession
+- In Spring, the ***singleton scope*** is the default bean scope, which means that only one instance of a bean is created for the entire Spring IoC container: 
+- **Explanation**
+    The singleton scope is used for beans that need to be shared between different parts of the application, such as database connection pools, loggers, and thread pools. 
+- **How it works**
+    All requests for beans with an ID or IDs that match the singleton bean definition result in that one specific bean instance being returned by the Spring container
+- practical - https://youtu.be/Zx9iYwQqaPg?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=258
 - 
-
-
+- Prototype scope -  A new instance of the bean is created each time it is requested from the Spring container.
+- Spring does **not** keep track of these instances once they are created.
+- The bean is not cached and is not shared across different parts of the application.
+- Example - 
+```
+@Component
+@Scope("prototype") 
+public class MyPrototypeBean { 
+	public MyPrototypeBean() { 
+		System.out.println("MyPrototypeBean instantiated"); 
+	} 
+}
+```
+- Example - https://youtu.be/Zx9iYwQqaPg?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=475
+- 
