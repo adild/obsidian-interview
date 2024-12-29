@@ -127,4 +127,7 @@ public class MyPrototypeBean {
 }
 ```
 - Example - https://youtu.be/Zx9iYwQqaPg?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=475
+<h4>Removing Complete XML for Spring Configuration </h4>
+- practical - https://youtu.be/xYgQfey1p0Y?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=695
+- practical - https://www.youtube.com/watch?v=x2f0-lkvfxs&list=PL0zysOflRCekeiERASkpi-crREVensZGS&index=39
 - 
