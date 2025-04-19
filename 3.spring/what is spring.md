@@ -42,6 +42,7 @@ class Geeta {
 	- AnnotationConfigApplicationContext
 	-  FileSystemXmlApplicationContext
 - more info - https://stackoverflow.com/questions/19615972/application-context-what-is-this
+- more info - https://www.baeldung.com/spring-application-context
 - Dependency injection done by IOC container can be done in 2 ways () -
 	- more info in video - https://youtu.be/bICqNfzUG4c?list=PL0zysOflRCekeiERASkpi-crREVensZGS&t=304
 	- using setter injection

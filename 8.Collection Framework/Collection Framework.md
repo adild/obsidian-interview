@@ -1,0 +1,3 @@
+- Collection Framework is a java API which provides architecture to store and manipulate group of objects.
+- Java API is nothing but classes and interfaces.
+- java.util contains collection framework
