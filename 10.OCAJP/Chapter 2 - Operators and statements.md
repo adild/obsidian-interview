@@ -83,3 +83,45 @@ boolean is not supported - like switch(true)  {} -  this is incorrect - compilat
 example exam question - https://youtu.be/htSD79-zHGA?list=PLviC8AFqAj5BEtYhyh2QUgUHjzIU_61Ib&t=2024
 
 
+- String concatanation -
+rules -
+![[Pasted image 20250617171037.png]]
+
+![[Pasted image 20250617171114.png]]
+
+Above pic, line 17 gives error as String value cant be store in int data type.
+line 22 output is 3c (remember this)
+
+Another example - 
+![[Pasted image 20250617171451.png]]
+Above pic, observe line 24, 25 for data types, one of them is String.
+
+- Immutability -
+	- meaning - cannot be changed
+
+- String methods -
+![[Pasted image 20250618165210.png]]
+line 18 - searches for 'al' and returns its index.
+line 19 - starts the search from index 4 (second parameter).
+line 20 - starts the search from index 5 but it didnt find 'al' so it returns -1
+
+- substring - 
+![[Pasted image 20250618170123.png]]
+end index is open bracket, means dont inculde 4 in above example at line 26. 
+line 29 - exception cause end end index cant be smaller than begin index.
+line 30 - out of bound exception.
+
+![[Pasted image 20250618170730.png]]
+Above will output as the original String s because String is immutable. If we need to do upper case then we have to reassign like s = s.toUpperCase(); or assign to different variable.
+
+![[Pasted image 20250618171402.png]]
+contains is case sensitive thats why line 54 prints false
+
+![[Pasted image 20250619134652.png]]
+line 64 - trims starting and trailing spaces
+
+![[Pasted image 20250619135454.png]]
+method chaining at line 74
+
+StringBuilder - 
+watch this very imp - https://youtu.be/vXBMAhOEy90?t=768&si=qt9f-G_DVW5R_v_E
