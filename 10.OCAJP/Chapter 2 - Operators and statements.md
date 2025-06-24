@@ -125,3 +125,56 @@ method chaining at line 74
 
 StringBuilder - 
 watch this very imp - https://youtu.be/vXBMAhOEy90?t=768&si=qt9f-G_DVW5R_v_E
+
+- == operator in String
+
+- StringBuilder -
+![[Pasted image 20250623131109.png]]
+
+understanding of above example -
+![[Pasted image 20250623131136.png]]
+
+tricky question - 
+![[Pasted image 20250623133244.png]]
+
+line 23 returns false - cause at compile time " Akash" at line 22 is created on different memory address in heap pool.
+
+- equals method in class / used with object - 
+watch ve2ry imp - https://youtu.be/4caFTKiUozI?list=PLviC8AFqAj5BEtYhyh2QUgUHjzIU_61Ib&t=1082
+
+- Array - 
+![[Pasted image 20250623135029.png]]
+
+valid array declaration - 
+![[Pasted image 20250623140933.png]]
+line 17 - both ids, types are of array data type
+
+default value for array - 
+![[Pasted image 20250623141908.png]]
+line 5 - default to null
+line 11 - creates array of size 2 and default value is [null, null]
+
+casting of arrays - 
+![[Pasted image 20250623142601.png]]
+line 31 - converting object to array - carefully use [] to convert to array.
+
+- sorting - 
+![[Pasted image 20250623143718.png]]
+
+line 50 - starting and ending index are provided as 2nd and 3rd parameter.
+line 55 - prints [10, 100, 9] - cause it sorts in lexographical order - means which character comes before which character, means 1 is smaller than 9, thats why 100 is placed before 9
+
+- var args -
+imp - https://youtu.be/_lUYpcpQboc?list=PLviC8AFqAj5BEtYhyh2QUgUHjzIU_61Ib&t=2510
+
+- 2d array - 
+declaration - 
+![[Pasted image 20250623150038.png]]
+
+understanding - 
+![[Pasted image 20250623150334.png]]
+
+above array is - int[][][] ints = new int\[3\]\[2\]
+
+questions - https://youtu.be/_lUYpcpQboc?list=PLviC8AFqAj5BEtYhyh2QUgUHjzIU_61Ib&t=3236
+
