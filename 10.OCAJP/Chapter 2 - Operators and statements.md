@@ -178,3 +178,38 @@ above array is - int[][][] ints = new int\[3\]\[2\]
 
 questions - https://youtu.be/_lUYpcpQboc?list=PLviC8AFqAj5BEtYhyh2QUgUHjzIU_61Ib&t=3236
 
+- ArrayList -
+
+![[Pasted image 20250624124632.png]]
+This is fine.
+
+tricky question - https://youtu.be/vnIgWrQmgSI?list=PLviC8AFqAj5BEtYhyh2QUgUHjzIU_61Ib&t=1082
+
+equals method - 
+![[Pasted image 20250624125633.png]]
+equal method returns true when both araayList size is same and contents are also same.
+line 74 - true
+line 77- false
+line 81 - false - cause size is same but contents are not. 
+
+very imp watch this (watch till the end)- https://youtu.be/vnIgWrQmgSI?list=PLviC8AFqAj5BEtYhyh2QUgUHjzIU_61Ib&t=1975 
+
+- Date
+- LocalDate, LocalTime, LocalDateTime 
+Above 3 are private constructors ie we cant do below
+LocalDate date = new LocalDate() - compiler error - cant use new keyword 
+Also above 3 are immutable just like Strings.
+
+methods - 
+![[Pasted image 20250624141424.png]]
+
+- chapter 3 summary
+![[Pasted image 20250624141850.png]]
+remember above points
+
+questions in exam - https://www.youtube.com/watch?v=tAQUMmIgWzA&list=PLviC8AFqAj5BEtYhyh2QUgUHjzIU_61Ib&index=24
+
+
+![[Pasted image 20250624183113.png]]
+in binarySearch - above example - 4f is not present in array, if it would have present then it will be om index 2. So since its not present the output will be calculated as negate 2 ie -2 and add -1, so
+-2-1 = -3 . so correct option is D
