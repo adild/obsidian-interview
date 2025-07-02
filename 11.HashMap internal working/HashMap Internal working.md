@@ -1,0 +1,145 @@
+reference - https://www.youtube.com/watch?v=XhK6LG3JbFU
+
+- equals method -
+
+example -
+```
+public class Person {  
+  
+    private int voterId;  
+    private String personName;  
+  
+    public Person(int voterId, String personName) {  
+        this.voterId = voterId;  
+        this.personName = personName;  
+    }  
+  
+    @Override  
+    public String toString() {  
+        return "Person{" +  
+                "voterId=" + voterId +  
+                ", personName='" + personName + '\'' +  
+                '}';  
+    }  
+}
+```
+
+if we do -
+```
+Person abhilash = new Person(101, "Abhilash");  
+Person abhilashDuplicate = new Person(101, "Abhilash");  
+  
+System.out.println(abhilash.equals(abhilashDuplicate)); //false
+```
+the contents of both abhilash and abhilashDuplicate are same it still gives false when equals method is used. Because above Person class does not have equals method override.
+When equals method used in 2nd code snippet, it is actually calling equals method of Object class which internally does "\==" comparison ie reference comparison. In 2nd code snippet we are creating two different objects ie abhilash and abhilashDuplicate, these are created on heap memory as two different objects. 
+
+![[Pasted image 20250702123830.png]]
+
+if we do -
+```
+Integer i1 = 100;
+Integer i2 = 100;
+System.out.println(i1.equals(i2)); // true
+```
+Above will be true as Integer class overrides the equals method and it is actually comparing contents of i1 and i2. 
+
+If we wanted to compare actual contents of an object just like Person class contents then we need to override equals method in Person class. In IDE we can do shortcut alt+insert and overirde equals method. person class looks like below -
+
+```
+import java.util.Objects;  
+  
+public class Person {  
+  
+    private int voterId;  
+    private String personName;  
+  
+    public Person(int voterId, String personName) {  
+        this.voterId = voterId;  
+        this.personName = personName;  
+    }  
+  
+    @Override  
+    public String toString() {  
+        return "Person{" +  
+                "voterId=" + voterId +  
+                ", personName='" + personName + '\'' +  
+                '}';  
+    }  
+  
+    @Override  
+    public boolean equals(Object o) {  
+        if (this == o) return true;  
+        if (o == null || getClass() != o.getClass()) return false;  
+        Person person = (Person) o;  
+        return voterId == person.voterId && Objects.equals(personName, person.personName);  
+    }   
+}
+```
+Now if we calls equals method it will compare contents -
+```
+System.out.println(abhilash.equals(abhilashDuplicate)); //true
+System.out.println(abhilash==abhilashDuplicate); //false
+```
+
+
+- Hash code -
+points to remember - 
+- memory address is different than hashcode.
+- hashcode() are not direct memory address. The memory address is used to generate hashcode.
+- Implementation of hashcode is provide in Object class. its a native because it implementation is done in another language ie c language.
+
+Every object has different memory address and if hashcode is generated for the objects then hashcode will be unique 90 percent of the time but it can generate same hashcode for 10 percent of the time. So its not guaranteed that hashcode will be different for different objects. 
+example - 
+```
+System.out.println(new String("FB").hashCode()); //2236
+System.out.println(new String("Ea").hashCode()); //2236
+```
+See above example - the objects are different still hashcode is same. 
+So never assume if objects are different than they will have different hashcode.
+
+Thumb rule - 
+When objects contents are same then hashcode should always be same.
+example - 
+```
+System.out.println(new String("abhi").hashCode()); //2987234  
+System.out.println(new String("abhi").hashCode()); //2987234
+```
+Above example returns same hashcode because contents are same
+
+But if we call hashcode method on Person class it will give different output even if contents are same.
+example - 
+```
+Person abdul = new Person(101, "abdul");  
+Person abdulDuplicate = new Person(101, "abdul");  
+  
+System.out.println(abdul.hashCode());  // 455659002
+System.out.println(abdulDuplicate.hashCode()); // 250421012
+```
+Why is that? because when we call hashcode() method in above snippet it is calling hascode() of Object class and it will calculate hashcode using memory address of those objects which is obviously different as they are different objects on heap.
+But rule is that if contents are same than hashcode should be same as well.
+How to solve above problem?
+Override hashcode() method in Person class. Like below (alt+insert intellj shortcut)-
+```  
+    @Override  
+    public int hashCode() {  
+        return Objects.hash(voterId, personName);  
+	}  
+```
+Now if we run again - 
+```
+Person abdul = new Person(101, "abdul");  
+Person abdulDuplicate = new Person(101, "abdul");  
+  
+System.out.println(abdul.hashCode());  // 92604982
+System.out.println(abdulDuplicate.hashCode()); // 92604982
+```
+it will give same hashcode for objects which has same content.
+
+Conclusion (remember) -
+1) If checking 2 different objects than their hashcode should be different but sometimes their hashcode are same.
+2) if contents of objects are same than their hashcode should be same(override hashcode() in custom object) -  very important.
+
+- HashMap internal working - 
+watch this till 1:17:00- https://youtu.be/XhK6LG3JbFU?t=3698
+
