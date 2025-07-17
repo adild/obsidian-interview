@@ -74,10 +74,13 @@ remember - first hit/refresh -> localhost:8761 -> this is ui -> localhost:8761/e
 its a useful for getting info. Its basically a registry.
 it will show details of instances up and running.
 leaseInfo - 
-- service will send heart beat every 30 secs to eureka. 	
-	- lease-renewal-interval-in-seconds property - default is 30, we can change it using this property
-- if for 90 secs its not sending heart beat then service is deregistered from eureka register
-	- lease-expiration-duration-in-seconds property - default is 90, we can change.
+	- service will send heart beat every 30 secs to eureka. 	
+		- lease-renewal-interval-in-seconds property - default is 30, we can change it using this property
+	- if for 90 secs its not sending heart beat then service is deregistered from eureka register
+		- lease-expiration-duration-in-seconds property - default is 90, we can change.
 
 - TCS/IP monitor - 
 https://www.youtube.com/watch?v=ZcM3e_zp6Tk&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=7&t=3019s
+
+- Actuator - https://www.youtube.com/watch?v=FnxXp1m1TTw&list=PL3NrzZBjk6m_n8QZCdnF7Yax36cqWkO9j&index=9&t=162s
+
