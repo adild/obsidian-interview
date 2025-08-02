@@ -1,17 +1,13 @@
 An immutable class in Java is a class whose instances cannot be modified after they are created. Once an object of an immutable class is instantiated, its state remains constant throughout its lifetime. This means that any operation that appears to modify an immutable object actually results in the creation of a new object with the desired changes, leaving the original object untouched.
 
 To create an immutable class in Java, follow these key principles:
-
 - Declare the class as `final`:
     This prevents other classes from extending it and potentially altering its behavior or state through inheritance.
-    
 - Make all fields `private` and `final`:
     - `private` restricts direct access to the fields from outside the class.
     - `final` ensures that the fields are initialized once (in the constructor) and cannot be reassigned afterward.
-    
 - **Do not provide setter methods**:
     Since the object's state should not change after creation, there should be no methods to modify the values of the fields.
-    
 - **Initialize all fields in the constructor**:
     All fields must be assigned their initial values when an object of the class is created.
     
