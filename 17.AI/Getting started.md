@@ -1,0 +1,9 @@
+Experienced Java developers are expected to understand AI system integration, not just model building. Key interview areas focus on using Java to implement LLMs via APIs (e.g., OpenAI, LangChain4j), managing retrieval-augmented generation (RAG) workflows, handling API orchestration, and deploying models within Spring Boot microservices. Expect questions on ==embedding generation, vector databases, and managing LLM hallucinations==. [[1](https://medium.com/@arpigarg/q-a-will-java-become-obsolete-soon-due-to-ai-advances-4f4495311b62), [2](https://www.youtube.com/watch?v=LqSBDVlk2cE&t=57), [3](https://www.foundit.in/career-advice/java-interview-questions-and-answers-for-2-to-3-years-experience/), [4](https://www.the-main-thread.com/p/langchain4j-interview-questions-java), [5](https://www.youtube.com/shorts/MV3yFzqEXWI)]
+
+**AI System Design & Integration Questions (Java Focus)**
+
+- **RAG Architecture:** Describe how you would implement a RAG (Retrieval-Augmented Generation) pipeline using Java to enhance LLM responses with internal company data.
+- **Vector Database Interaction:** How do you store and retrieve semantic embeddings in a vector database (e.g., Pinecone, Milvus) using Java?
+- **API Management:** How would you handle rate limits and error handling when integrating OpenAI APIs within a Spring Boot service?
+- **Prompt Engineering in Java:** How do you structure dynamic prompts within your Java code, and how do you prevent prompt injection attacks?
+- **Hallucination Control:** What strategies can be implemented in the retrieval step to minimize hallucinations in LLM output? [[1](https://www.youtube.com/shorts/MV3yFzqEXWI), [2](https://www.youtube.com/watch?v=miEQ_n8h1bM), [3](https://adityasriv16.medium.com/the-future-of-java-in-the-age-of-ai-what-every-developer-must-learn-now-29abd7b47289), [4](https://medium.com/@agiri_56085/from-java-software-engineer-to-ai-engineer-a-roadmap-to-the-future-ae61bab128c0)]
